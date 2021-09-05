@@ -1,0 +1,11 @@
+version: '3'
+services:
+  p4d:
+    build: docker
+    image: p4d
+    environment:
+      SERVERID: master
+    ports:
+      - 1666:1666
+    volumes:
+      - ./perforce/servers:/opt/perforce/servers
