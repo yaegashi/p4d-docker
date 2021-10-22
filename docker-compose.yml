@@ -2,7 +2,7 @@ version: '3'
 services:
   p4d:
     build: docker
-    image: p4d
+    image: ghcr.io/yaegashi/p4d-docker/p4d
     environment:
       SERVERID: master
     ports:

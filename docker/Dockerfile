@@ -1,8 +1,8 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 RUN apt-get update && \
     apt-get install -y gnupg2 curl gosu pwgen && \
-    echo "deb http://package.perforce.com/apt/ubuntu bionic release" > /etc/apt/sources.list.d/perforce.list && \
+    echo "deb http://package.perforce.com/apt/ubuntu focal release" > /etc/apt/sources.list.d/perforce.list && \
     curl -sL https://package.perforce.com/perforce.pubkey | apt-key add - && \
     apt-get update && \
     apt-get install -y helix-p4d \
